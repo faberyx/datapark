@@ -1,21 +1,15 @@
 <?php
 include("connect.php");
+ 
+$result = $dbh->query("SELECT  count(flora_parchi.flora) as ft ,parchi.id,flora_parchi.*,tipi_pianta.*,famiglie.*,flora.* from parchi,flora_parchi,tipi_pianta,famiglie,flora where (parchi.id=flora_parchi.parco) and (flora_parchi.flora=flora.id) and (flora.tipo_pianta=tipi_pianta.id) and (tipi_pianta.famiglia=famiglie.id) and famiglie.nome='arbusti' ");
+$stmt = $dbh->query("SELECT   count(flora_parchi.flora) as ft ,parchi.id,flora_parchi.*,tipi_pianta.*,famiglie.*,flora.* from parchi,flora_parchi,tipi_pianta,famiglie,flora where (parchi.id=flora_parchi.parco) and (flora_parchi.flora=flora.id) and (flora.tipo_pianta=tipi_pianta.id) and (tipi_pianta.famiglia=famiglie.id) and famiglie.nome='arbusti' ");
+echo '<table style="border: 1px solid black;">';
+while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
-$sql = "SELECT fauna.nome as fn,fauna.specie,specie.nome as sn,specie.id FROM fauna,specie WHERE fauna.specie=specie.id ORDER BY sn";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "<tr>
-                <td>".$row["fn"]."</td>
-                <td>".$row["sn"]."</td>
-              </tr>";
-    }
-} 
-
-else {
-    echo "0 results";
+    echo "<tr>
+    <td>".$row["ft"]."</td>
+    </tr>";
 }
-$conn->close();
-?>
+echo '</table>';
+ 
+?>
