@@ -58,50 +58,17 @@
                             <ul>
                                 <li class="has-sub"><a href="#"><span>FLORA</span></a>
                                     <ul>
-                                        <li class="has-sub"><a href="/?url=numeroarbusti"><span>NUMERO ARBUSTI</span></a>
-
-                                            <ul>
-                                            </ul>
-                                        </li>
-                                        <li class="has-sub"><a href="/?url=speciepini"><span>SPECIE PINI</span></a>
-
-                                            <ul>
-                                            </ul>
-                                        </li>
+                                        <li class="has-sub"><a href="/?url=numeroarbusti"><span>NUMERO ARBUSTI</span></a></li>
+                                        <li class="has-sub"><a href="/?url=speciepini"><span>SPECIE PINI</span></a> </li>
                                     </ul>
                                 </li>
                                 <li class="has-sub"><a href="#"><span>FAUNA</span></a>
                                     <ul>
-                                        <li class="has-sub"><a href="/?url=esemplarifauna"><span>ESEMPLARI FAUNA</span></a>
-                                            <ul>
-
-                                            </ul>
-                                        </li>
-                                        <li class="has-sub"><a href="/?url=rischioestinzione"><span>A RISCHIO ESTINZIONE</span></a>
-
-                                            <ul>
-
-                                            </ul>
-                                        </li>
-                                        <li class="has-sub"><a href="/?url=nasciteannuali"><span>NASCITE ANNUALI</span></a>
-
-
-                                            <ul>
-
-                                            </ul>
-                                        </li>
-                                        <li class="has-sub"><a href="/?url=numeromediospecie"><span>NUMERO MEDIO SPECIE</span></a>
-                                            <ul>
-
-
-                                            </ul>
-                                        </li>
-                                        <li class="has-sub" class="last"><a href="/?url=esemplarepiuanziano"><span>ESEMPLARE PIU' ANZIANO</span></a>
-                                            <ul>
-
-
-                                            </ul>
-                                        </li>
+                                        <li class="has-sub"><a href="/?url=esemplarifauna"><span>ESEMPLARI FAUNA</span></a></li>
+                                        <li class="has-sub"><a href="/?url=rischioestinzione"><span>A RISCHIO ESTINZIONE</span></a> </li>
+                                        <li class="has-sub"><a href="/?url=nasciteannuali"><span>NASCITE ANNUALI</span></a></li>
+                                        <li class="has-sub"><a href="/?url=numeromediospecie"><span>NUMERO MEDIO SPECIE</span></a></li>
+                                        <li class="has-sub" class="last"><a href="/?url=esemplarepiuanziano"><span>ESEMPLARE PIU' ANZIANO</span></a></li>
                                     </ul>
                                 </li>
                             </ul>
