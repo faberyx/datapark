@@ -1,18 +1,28 @@
 <?php
 include("connect.php");
  
-$result = $dbh->query("SELECT  parchi.*,parchi.nome as pn,parchi.id as pd,flora_parchi.*,flora.*,tipi_pianta.*,flora.nome as fn from parchi,flora_parchi,flora,tipi_pianta where (parchi.id=flora_parchi.parco) and (flora_parchi.flora=flora.id) and (flora.tipo_pianta=tipi_pianta.id) and (tipi_pianta.nome='pino')");
-$stmt = $dbh->query("SELECT  parchi.*,parchi.nome as pn,parchi.id as pd,flora_parchi.*,flora.*,tipi_pianta.*,flora.nome as fn from parchi,flora_parchi,flora,tipi_pianta where (parchi.id=flora_parchi.parco) and (flora_parchi.flora=flora.id) and (flora.tipo_pianta=tipi_pianta.id) and (tipi_pianta.nome='pino')");
-echo '<table style="border: 1px solid black;">';
-while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+$sql = "SELECT 
+  parco.nome AS pn,
+  parco.id AS pd,
+  flora.nome AS fn
+FROM
+  parco,
+  flora,
+  tipo_pianta
+WHERE
+  (parco.id = flora.parco) AND (flora.tipo_pianta = tipo_pianta.id) AND( tipo_pianta.nome = 'margherita')";
 
-    echo "<tr>
-    <td>".$row["pd"]."</td>
-    <td>".$row["pn"]."</td>
-    <td>".$row["fn"]."</td>
-    </tr>";
-}
-echo '</table>';
- 
- 
-?>
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) 
+{
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<tr>
+    			<td>".$row["pd"]."</td>
+    			<td>".$row["pn"]."</td>
+   			 	<td>".$row["fn"]."</td>
+              </tr>";
+    }
+} 
+?>
